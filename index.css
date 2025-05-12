@@ -1,0 +1,153 @@
+/* Reset and Base Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: #fff9e6;
+    color: #1a1a1a;
+    padding: 1rem;
+}
+
+/* Header */
+.header {
+    text-align: center;
+    font-size: 1.25rem;
+    font-weight: bold;
+    padding: 1rem 0;
+}
+
+/* Profile Section */
+.profile-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #fff3d9;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    border-radius: 8px;
+}
+
+.profile-pic {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+}
+
+.profile-info {
+    text-align: center;
+}
+
+.profile-info h2 {
+    margin-bottom: 0.25rem;
+}
+
+.title {
+    font-style: italic;
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 0.5rem;
+    border: 1px solid #1cb955;
+    padding: 2px 8px;
+    border-radius: 4px;
+    display: inline-block;
+}
+
+.edit {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+    color: #333;
+}
+
+.edit img {
+    width: 16px;
+    height: 16px;
+}
+
+/* New Post Button */
+.new-post-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: #1a1a1a;
+    color: white;
+    padding: 10px 16px;
+    border: none;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    cursor: pointer;
+}
+
+.new-post-btn img {
+    width: 14px;
+}
+
+/* Gallery */
+.gallery {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+}
+
+/* Gallery Card */
+.card {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card p {
+    padding: 0.75rem;
+    font-size: 0.95rem;
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    font-size: 0.8rem;
+    margin-top: 2rem;
+    color: #888;
+}
+
+/* RESPONSIVE DESIGN */
+@media (min-width: 640px) {
+    .gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .profile-section {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        gap: 2rem;
+    }
+
+    .profile-pic {
+        margin-bottom: 0;
+    }
+
+    .profile-info {
+        text-align: left;
+    }
+
+    .gallery {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
